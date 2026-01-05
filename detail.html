@@ -9,6 +9,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
+    <link rel="shortcut icon" href="img/logodrksrana.jpg" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -41,7 +42,61 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 52px;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: #25d366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      text-decoration: none;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+
+    .whatsapp-float i {
+      font-size: 30px;
+      line-height: 1;
+      /* bottom: 70px !important; */
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.3);
+      filter: brightness(0.98);
+      color: #fff;
+    }
+
+    @media (max-width: 575.98px) {
+      .whatsapp-float {
+        right: 18px;
+        bottom: 14px;
+        width: 54px;
+        height: 54px;
+        bottom: 52px;
+      }
+      .whatsapp-float i {
+        font-size: 28px;
+      }
+    }
+  </style>
   <body>
+    <a
+      href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Book on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
       <div class="container">
@@ -59,20 +114,20 @@
           </div>
           <div class="col-md-6 text-center text-lg-end">
             <div class="d-inline-flex align-items-center">
-              <a class="text-body px-2" href="#!">
+              <a
+                class="text-body px-2"
+                href="https://www.facebook.com/share/1GyaX9o5vW/"
+              >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a class="text-body px-2" href="#!">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a class="text-body px-2" href="#!">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a class="text-body px-2" href="#!">
+              <a
+                class="text-body px-2"
+                href="https://www.instagram.com/dr_ksrana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
                 <i class="fab fa-instagram"></i>
-              </a>
-              <a class="text-body ps-2" href="#!">
-                <i class="fab fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -508,12 +563,12 @@
               Get In Touch
             </h4>
             <p class="mb-4">
-              No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et
-              et dolor sed dolor
+              Pediatric consultation for newborn care, vaccination, fever &
+              infections, nutrition & growth, and respiratory issues.
             </p>
             <p class="mb-2">
-              <i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street,
-              New York, USA
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>RRN Road,
+              Sky Clinic &amp; Diagnostic Centre, Cooch Behar
             </p>
             <p class="mb-2">
               <i class="fa fa-envelope text-primary me-3"></i>info@example.com
@@ -574,18 +629,9 @@
             <h4
               class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
             >
-              Newsletter
+              Follow Us
             </h4>
-            <form action="">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control p-3 border-0"
-                  placeholder="Your Email Address"
-                />
-                <button class="btn btn-primary">Sign Up</button>
-              </div>
-            </form>
+
             <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
             <div class="d-flex">
               <a
@@ -595,7 +641,7 @@
               ></a>
               <a
                 class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                href="#!"
+                href="https://www.facebook.com/share/1GyaX9o5vW/"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -605,7 +651,7 @@
               ></a>
               <a
                 class="btn btn-lg btn-primary btn-lg-square rounded-circle"
-                href="#!"
+                href="https://www.instagram.com/dr_ksrana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>

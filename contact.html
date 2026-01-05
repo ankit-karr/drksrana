@@ -9,6 +9,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
+    <link rel="shortcut icon" href="img/logodrksrana.jpg" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -41,7 +42,92 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
+  <style>
+    .appointment-section .bg-white {
+      transition: all 0.3s ease;
+    }
+
+    .appointment-section .bg-white:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .appointment-section .form-control,
+    .appointment-section .form-select {
+      border-radius: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .appointment-section .form-control:focus,
+    .appointment-section .form-select:focus {
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .appointment-section .btn-primary {
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    .appointment-section .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 52px;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: #25d366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      text-decoration: none;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+
+    .whatsapp-float i {
+      font-size: 30px;
+      line-height: 1;
+      /* bottom: 70px !important; */
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.3);
+      filter: brightness(0.98);
+      color: #fff;
+    }
+
+    @media (max-width: 575.98px) {
+      .whatsapp-float {
+        right: 18px;
+        bottom: 14px;
+        width: 54px;
+        height: 54px;
+        bottom: 52px;
+      }
+      .whatsapp-float i {
+        font-size: 28px;
+      }
+    }
+  </style>
   <body>
+    <a
+      href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Book on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
       <div class="container">
@@ -59,20 +145,20 @@
           </div>
           <div class="col-md-6 text-center text-lg-end">
             <div class="d-inline-flex align-items-center">
-              <a class="text-body px-2" href="#!">
+              <a
+                class="text-body px-2"
+                href="https://www.facebook.com/share/1GyaX9o5vW/"
+              >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a class="text-body px-2" href="#!">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a class="text-body px-2" href="#!">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a class="text-body px-2" href="#!">
+              <a
+                class="text-body px-2"
+                href="https://www.instagram.com/dr_ksrana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
                 <i class="fab fa-instagram"></i>
-              </a>
-              <a class="text-body ps-2" href="#!">
-                <i class="fab fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -82,7 +168,7 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top bg-white shadow-sm mb-5">
+    <div class="container-fluid sticky-top bg-white shadow-sm">
       <div class="container">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
           <a href="index.html" class="navbar-brand">
@@ -110,27 +196,10 @@
               <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
               <a href="service.html" class="nav-item nav-link">Service</a>
-              <a href="price.html" class="nav-item nav-link">Pricing</a>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu m-0">
-                  <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                  <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                  <a href="team.html" class="dropdown-item">The Team</a>
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Testimonial</a
-                  >
-                  <a href="appointment.html" class="dropdown-item"
-                    >Appointment</a
-                  >
-                  <a href="search.html" class="dropdown-item">Search</a>
-                </div>
-              </div>
+              <a href="appointment.html" class="nav-item nav-link"
+                >Appointment</a
+              >
+              <a href="places.html" class="nav-item nav-link">Chambers</a>
               <a href="contact.html" class="nav-item nav-link active"
                 >Contact</a
               >
@@ -167,7 +236,9 @@
                   style="transform: rotate(15deg)"
                 ></i>
               </div>
-              <h6 class="mb-0">123 Street, New York, USA</h6>
+              <h6 class="mb-0">
+                RRN Road, Sky Clinic &amp; Diagnostic Centre, Cooch Behar
+              </h6>
             </div>
           </div>
           <div class="col-lg-4">
@@ -210,7 +281,7 @@
             <div class="position-relative h-100">
               <iframe
                 class="position-relative w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.044522249354!2d89.44114067595694!3d26.32505778509663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e2ffd6d0e9f487%3A0xfc05d042110c304a!2sSky%20Clinic!5e0!3m2!1sen!2sin!4v1767579829938!5m2!1sen!2sin"
                 frameborder="0"
                 style="border: 0"
                 allowfullscreen=""
@@ -224,48 +295,55 @@
           class="row justify-content-center position-relative"
           style="margin-top: -200px; z-index: 1"
         >
-          <div class="col-lg-8">
-            <div class="bg-white rounded p-5 m-5 mb-0">
-              <form>
-                <div class="row g-3">
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0"
-                      placeholder="Your Name"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="email"
-                      class="form-control bg-light border-0"
-                      placeholder="Your Email"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0"
-                      placeholder="Subject"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      class="form-control bg-light border-0"
-                      rows="5"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
-                      Send Message
-                    </button>
+          <div class="col-lg-6">
+            <div class="bg-white text-center rounded p-5 whatsapp-card">
+              <h1 class="mb-3">Book on WhatsApp</h1>
+              <p class="mb-4 text-muted">
+                Click below to book an appointment instantly. We will confirm
+                your time slot on WhatsApp.
+              </p>
+
+              <div class="wa-info mb-4">
+                <div class="wa-line">
+                  <i class="fab fa-whatsapp"></i>
+                  <div>
+                    <div class="wa-label">WhatsApp Number</div>
+                    <a
+                      class="wa-number"
+                      href="https://wa.me/917908266376"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      +91 79082 66376
+                    </a>
                   </div>
                 </div>
-              </form>
+
+                <div class="wa-line">
+                  <i class="fa fa-phone-alt"></i>
+                  <div>
+                    <div class="wa-label">Call (Appointment)</div>
+                    <a class="wa-number" href="tel:+919547196589"
+                      >+91 95471 96589</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                class="btn btn-success w-100 py-3 rounded-pill wa-btn"
+                href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-whatsapp me-2"></i> Book Appointment on
+                WhatsApp
+              </a>
+
+              <small class="d-block mt-3 text-muted">
+                Tip: Please share child’s age and symptoms for faster
+                confirmation.
+              </small>
             </div>
           </div>
         </div>
@@ -284,12 +362,12 @@
               Get In Touch
             </h4>
             <p class="mb-4">
-              No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et
-              et dolor sed dolor
+              Pediatric consultation for newborn care, vaccination, fever &
+              infections, nutrition & growth, and respiratory issues.
             </p>
             <p class="mb-2">
-              <i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street,
-              New York, USA
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>RRN Road,
+              Sky Clinic &amp; Diagnostic Centre, Cooch Behar
             </p>
             <p class="mb-2">
               <i class="fa fa-envelope text-primary me-3"></i>info@example.com
@@ -350,18 +428,9 @@
             <h4
               class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
             >
-              Newsletter
+              Follow Us
             </h4>
-            <form action="">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control p-3 border-0"
-                  placeholder="Your Email Address"
-                />
-                <button class="btn btn-primary">Sign Up</button>
-              </div>
-            </form>
+
             <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
             <div class="d-flex">
               <a
@@ -371,7 +440,7 @@
               ></a>
               <a
                 class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                href="#!"
+                href="https://www.facebook.com/share/1GyaX9o5vW/"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -381,7 +450,7 @@
               ></a>
               <a
                 class="btn btn-lg btn-primary btn-lg-square rounded-circle"
-                href="#!"
+                href="https://www.instagram.com/dr_ksrana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
