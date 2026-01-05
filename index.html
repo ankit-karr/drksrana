@@ -42,74 +42,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
   </head>
-  <style>
-    @media (max-width: 575.98px) {
-      .hero-header {
-        position: relative;
-      }
-
-      .hero-header::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.55) 0%,
-          rgba(0, 0, 0, 0.35) 50%,
-          rgba(0, 0, 0, 0.55) 100%
-        );
-        background-position: center center !important;
-        z-index: 0;
-      }
-
-      .hero-header .container,
-      .hero-header .container * {
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero-header h1,
-      .hero-header h5 {
-        color: rgba(255, 255, 255, 0.92) !important;
-        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-      }
-
-      .hero-header .text-primary {
-        color: #b9aeff !important;
-      }
-
-      .hero-header .btn-outline-light {
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.75) !important;
-        backdrop-filter: blur(4px);
-      }
-
-      .hero-header .btn-outline-light:hover {
-        background: #574b97 !important;
-        border-color: #574b97 !important;
-        color: #ffffff !important;
-      }
-    }
-
-    @media (max-width: 575.98px) {
-      .hero-header .hero-box {
-        margin-top: 55px !important;
-      }
-    }
-
-    .hero-slide::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.35) 50%,
-        rgba(0, 0, 0, 0.55) 100%
-      ) !important;
-      z-index: 0;
-    }
-  </style>
 
   <!-- service style -->
   <style>
@@ -192,7 +124,6 @@
   </style>
 
   <!-- appointment style -->
-
   <style>
     .appointment-section .bg-white {
       transition: all 0.3s ease;
@@ -368,34 +299,95 @@
       justify-content: center;
     }
   </style>
+  <!-- hero start -->
 
   <style>
-    .hero-carousel .carousel-item,
-    .hero-slide {
-      min-height: 740px;
+    @media (max-width: 575.98px) {
+      .hero-header {
+        position: relative;
+      }
+
+      .hero-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.55) 0%,
+          rgba(0, 0, 0, 0.35) 50%,
+          rgba(0, 0, 0, 0.55) 100%
+        );
+        background-position: center center !important;
+        z-index: 0;
+      }
+
+      .hero-header .container,
+      .hero-header .container * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-header h1,
+      .hero-header h5 {
+        color: rgba(255, 255, 255, 0.92) !important;
+        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+      }
+
+      .hero-header .text-primary {
+        color: #b9aeff !important;
+      }
+
+      .hero-header .btn-outline-light {
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.75) !important;
+        backdrop-filter: blur(4px);
+      }
+
+      .hero-header .btn-outline-light:hover {
+        background: #574b97 !important;
+        border-color: #574b97 !important;
+        color: #ffffff !important;
+      }
     }
 
-    .hero-slide {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: right top;
-      position: relative;
-      display: flex;
-      align-items: center;
+    @media (max-width: 575.98px) {
+      .hero-header .hero-box {
+        margin-top: 55px !important;
+      }
     }
 
     .hero-slide::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: transparent;
+      background: transparent !important;
       z-index: 0;
     }
+  </style>
 
-    .hero-slide .container,
-    .hero-slide .container * {
+  <style>
+    .hero-slide {
       position: relative;
-      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .hero-overlay a,
+    .hero-overlay button {
+      pointer-events: auto;
     }
 
     .hero-content > * {
@@ -432,21 +424,82 @@
       justify-content: center;
     }
 
+    .hero-pos-1 {
+      margin-top: 60px;
+      padding-left: 160px;
+    }
+
+    .hero-headline-bn {
+      color: #b9aeff !important;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      margin: 0 0 10px 0;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-sub-bn {
+      color: rgba(255, 255, 255, 0.92) !important;
+      font-weight: 600;
+      margin: 0 0 14px 0;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-bn-right-top {
+  position: absolute;
+  top: 140px;
+  right: 58px;
+  margin: 0;
+  z-index: 3;
+  text-align: center;
+  max-width: 100%;
+  line-height: 1.05;
+  font-size: 4.2rem;
+  font-weight: 900;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
     @media (max-width: 575.98px) {
-      .hero-carousel .carousel-item,
-      .hero-slide {
-        min-height: 520px;
+      .hero-headline-bn {
+        font-size: 1.05rem;
+        line-height: 1.25;
       }
 
-      .hero-slide {
-        background-position: 101% center !important;
+      .hero-sub-bn {
+        font-size: 0.98rem;
+        line-height: 1.35;
       }
 
+      .hero-bn-right-top {
+        top: 12px;
+        right: 12px;
+        max-width: 92%;
+        font-size: 1.55rem;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .hero-headline-bn {
+        font-size: 1.15rem;
+        line-height: 1.25;
+      }
+
+      .hero-sub-bn {
+        font-size: 1.02rem;
+        line-height: 1.35;
+      }
+      .hero-bn-right-top {
+        top: 16px;
+        right: 16px;
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
       .hero-box {
-        justify-content: flex-start !important;
-        padding-top: 120px !important;
-        padding-bottom: 40px !important;
-        min-height: auto !important;
+        justify-content: flex-start;
+        padding-top: 120px;
+        padding-bottom: 40px;
+        min-height: auto;
       }
 
       .hero-carousel h1 {
@@ -457,8 +510,14 @@
       .hero-carousel h5 {
         font-size: 1rem;
       }
+
+      .hero-pos-1 {
+        margin-top: 0;
+        padding-left: 16px;
+      }
     }
   </style>
+  <!-- hero end -->
 
   <style>
     .whatsapp-card {
@@ -733,69 +792,28 @@
       data-bs-pause="false"
     >
       <div class="carousel-inner">
-        <!-- Slide 1 -->
         <div class="carousel-item active">
-          <div
-            class="container-fluid hero-header hero-slide"
-            style="background-image: url('img/ranasecondbackground.jpg')"
-          >
-            <div class="container py-5">
-              <div class="row justify-content-start">
-                <div
-                  class="col-lg-8 text-center text-lg-start hero-box hero-content"
-                >
-                  <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
-                  <h5 class="text-white mb-md-4">
-                    Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 20+ Years of
-                    Experience
-                  </h5>
-                  <div class="pt-2">
-                    <a
-                      href="appointment.html"
-                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
-                    >
-                      Appointment
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div
-            class="container-fluid hero-header-2 hero-slide"
-            style="background-image: url('img/ranasecondbackground.jpg')"
-          >
-            <div class="container py-5">
-              <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
-                  <h5
-                    class="d-inline-block text-primary text-uppercase border-bottom border-5"
-                    style="color: white !important"
+          <div class="container-fluid hero-header hero-slide">
+            <img src="img/ranasecondbackground.jpg" class="hero-bg" alt="" />
+            <div class="hero-overlay">
+              <div class="container py-5">
+                <div class="row justify-content-start">
+                  <div
+                    class="col-lg-8 text-center text-lg-start hero-box hero-content hero-pos-1 hero-mobile-left"
                   >
-                    Welcome To Dr. KS Rana
-                  </h5>
-                  <h1 class="display-1 text-white mb-md-4">
-                    Trusted Pediatric Care for Your Child’s Healthy Future
-                  </h1>
-                  <h5 class="text-white mb-md-4">
-                    Expert consultation by Dr. KS Rana, one of the most trusted
-                    paediatricians in
-                    <span
-                      class="text-primary"
-                      style="border-color: rgba(256, 256, 256, 0.3)"
-                      >Cooch Behar</span
-                    >.
-                  </h5>
-                  <div class="pt-2">
-                    <a
-                      href="appointment.html"
-                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
-                      >Appointment</a
-                    >
+                    <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
+                    <h5 class="text-white mb-md-4">
+                      Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 20+ Years
+                      of Experience
+                    </h5>
+                    <div class="pt-2">
+                      <a
+                        href="appointment.html"
+                        class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
+                      >
+                        Appointment
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -803,28 +821,28 @@
           </div>
         </div>
 
-        <!-- Slide 3 -->
         <div class="carousel-item">
-          <div
-            class="container-fluid hero-header hero-slide"
-            style="background-image: url('img/thirdBackground.jpg')"
-          >
-            <div class="container py-5">
-              <div class="row justify-content-start">
-                <div
-                  class="col-lg-8 text-center text-lg-start hero-box hero-content"
-                >
-                  <div class="pt-2">
-                    <a
-                      href="appointment.html"
-                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
-                    >
-                      Get Schedule
-                    </a>
-                  </div>
+          <div class="container-fluid hero-header-2 hero-slide">
+            <img src="img/rana4.jpg" class="hero-bg" alt="" />
+            <div class="hero-overlay">
+              <div class="container py-5">
+                <div class="row justify-content-start">
+                  <h1 class="display-1 text-primary hero-bn-right-top">
+                    প্রতি শিশুর জন্য স্নেহময় যত্ন
+                  </h1>
+
+                  <h1 class="display-1 text-white">
+                    নিরাপদ, নির্ভরযোগ্য এবং সময়োপযোগী চিকিৎসা।
+                  </h1>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container-fluid hero-header hero-slide">
+            <img src="img/RANA3.jpg" class="hero-bg" alt="" />
           </div>
         </div>
       </div>

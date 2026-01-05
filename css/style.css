@@ -102,11 +102,6 @@
   object-fit: contain;
 }
 
-.hero-header {
-  background: url(../img/background4.png) top right no-repeat;
-  background-size: cover;
-}
-
 .service-item {
   position: relative;
   height: 350px;
