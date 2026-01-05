@@ -96,6 +96,19 @@
         margin-top: 55px !important;
       }
     }
+
+    .hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        rgba(0, 0, 0, 0.55) 100%
+      ) !important;
+      z-index: 0;
+    }
   </style>
 
   <!-- service style -->
@@ -375,12 +388,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.35) 50%,
-        rgba(0, 0, 0, 0.55) 100%
-      );
+      background: transparent;
       z-index: 0;
     }
 
@@ -729,7 +737,7 @@
         <div class="carousel-item active">
           <div
             class="container-fluid hero-header hero-slide"
-            style="background-image: url('img/background4.png')"
+            style="background-image: url('img/ranasecondbackground.jpg')"
           >
             <div class="container py-5">
               <div class="row justify-content-start">
@@ -941,7 +949,7 @@
                 <button
                   type="button"
                   data-bs-target="#aboutCarousel"
-                  data-bs-slide-to="2"
+                  data-bs-slide-to="3"
                   aria-label="Slide 4"
                 ></button>
               </div>
@@ -981,57 +989,63 @@
               <div class="col-sm-3 col-6">
                 <div class="bg-light-2 text-center rounded-circle py-4">
                   <i
-                    class="fa fa-3x fa-user-md mb-3"
+                    class="fa fa-3x fa-child mb-3"
                     style="color: white !important"
                   ></i>
                   <h6 class="mb-0" style="color: white !important">
-                    Qualified<small
-                      class="d-block text-primary"
-                      style="color: white !important"
-                      >Doctors</small
-                    >
-                  </h6>
-                </div>
-              </div>
-              <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
-                  <i
-                    class="fa fa-3x fa-procedures mb-3"
-                    style="color: white !important"
-                  ></i>
-                  <h6 class="mb-0" style="color: white !important">
-                    Emergency<small
-                      class="d-block text-primary"
-                      style="color: white !important"
-                      >Services</small
-                    >
-                  </h6>
-                </div>
-              </div>
-              <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
-                  <i
-                    class="fa fa-3x fa-microscope mb-3"
-                    style="color: white !important"
-                  ></i>
-                  <h6 class="mb-0" style="color: white !important">
-                    Accurate<small
+                    Advanced<small
                       class="d-block"
                       style="color: white !important"
-                      >Testing</small
+                      >Pediatric Care</small
                     >
                   </h6>
                 </div>
               </div>
+
               <div class="col-sm-3 col-6">
                 <div class="bg-light-2 text-center rounded-circle py-4">
                   <i
-                    class="fa fa-3x fa-ambulance mb-3"
+                    class="fa fa-3x fa-heartbeat mb-3"
                     style="color: white !important"
                   ></i>
                   <h6 class="mb-0" style="color: white !important">
-                    Free<small class="d-block" style="color: white !important"
-                      >Ambulance</small
+                    Safe &amp; Gentle<small
+                      class="d-block"
+                      style="color: white !important"
+                      >Treatment</small
+                    >
+                  </h6>
+                </div>
+              </div>
+
+              <div class="col-sm-3 col-6">
+                <div class="bg-light-2 text-center rounded-circle py-4">
+                  <i
+                    class="fa fa-3x fa-users mb-3"
+                    style="color: white !important"
+                  ></i>
+                  <h6 class="mb-0" style="color: white !important">
+                    Parent<small class="d-block" style="color: white !important"
+                      >Counseling</small
+                    >
+                  </h6>
+                </div>
+              </div>
+
+              <div class="col-sm-3 col-6">
+                <div class="bg-light-2 text-center rounded-circle py-4">
+                  <i
+                    class="fa fa-3x fa-plus-square mb-3"
+                    style="color: white !important"
+                  ></i>
+
+                  <!-- <i class="fa fa-3x fa-exclamation-triangle mb-3" style="color: white !important"></i> -->
+
+                  <h6 class="mb-0" style="color: white !important">
+                    Emergency<small
+                      class="d-block"
+                      style="color: white !important"
+                      >Support</small
                     >
                   </h6>
                 </div>
@@ -1172,9 +1186,7 @@
                   <i class="fa fa-2x fa-hospital text-white"></i>
                 </div>
                 <div>
-                  <h4 class="chamber-title">
-                    Sky Clinic &amp; Diagnostic Centre
-                  </h4>
+                  <h4 class="chamber-title">Sky Clinic &amp; Centre</h4>
                   <p class="chamber-place">Cooch Behar</p>
 
                   <div class="chamber-badges">
@@ -1228,12 +1240,10 @@
             <div class="chamber-card">
               <div class="chamber-head">
                 <div class="chamber-icon">
-                  <i class="fa fa-2x fa-clinic-medical text-white"></i>
+                  <i class="fa fa-2x fa-hospital text-white"></i>
                 </div>
                 <div>
-                  <h4 class="chamber-title">
-                    Chowdhury Medical Hall &amp; Diagnostic Centre
-                  </h4>
+                  <h4 class="chamber-title">Chowdhury Medical &amp; Centre</h4>
                   <p class="chamber-place">Baburhat</p>
 
                   <div class="chamber-badges">
@@ -1260,12 +1270,10 @@
             <div class="chamber-card">
               <div class="chamber-head">
                 <div class="chamber-icon">
-                  <i class="fa fa-2x fa-hospital-user text-white"></i>
+                  <i class="fa fa-2x fa-hospital text-white"></i>
                 </div>
                 <div>
-                  <h4 class="chamber-title">
-                    Mukti Medical &amp; Diagnostic Centre
-                  </h4>
+                  <h4 class="chamber-title">Mukti Medical &amp; Centre</h4>
                   <p class="chamber-place">Tufanganj</p>
 
                   <div class="chamber-badges">
@@ -1292,12 +1300,10 @@
             <div class="chamber-card">
               <div class="chamber-head">
                 <div class="chamber-icon">
-                  <i class="fa fa-2x fa-stethoscope text-white"></i>
+                  <i class="fa fa-2x fa-hospital text-white"></i>
                 </div>
                 <div>
-                  <h4 class="chamber-title">
-                    Joyguru Medical &amp; Diagnostic Centre
-                  </h4>
+                  <h4 class="chamber-title">Joyguru Medical &amp; Centre</h4>
                   <p class="chamber-place">Falakata</p>
 
                   <div class="chamber-badges">
@@ -1324,12 +1330,10 @@
             <div class="chamber-card">
               <div class="chamber-head">
                 <div class="chamber-icon">
-                  <i class="fa fa-2x fa-notes-medical text-white"></i>
+                  <i class="fa fa-2x fa-hospital text-white"></i>
                 </div>
                 <div>
-                  <h4 class="chamber-title">
-                    Star Medical Hall &amp; Diagnostic Centre
-                  </h4>
+                  <h4 class="chamber-title">Star Medical &amp; Centre</h4>
                   <p class="chamber-place">Dinhata</p>
 
                   <div class="chamber-badges">
@@ -1554,7 +1558,8 @@
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h4
-              class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+              class="d-inline-block text-uppercase border-bottom border-5 mb-4"
+              style="color: white"
             >
               Get In Touch
             </h4>
@@ -1575,7 +1580,8 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <h4
-              class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+              class="d-inline-block text-uppercase border-bottom border-5 mb-4"
+              style="color: white"
             >
               Quick Links
             </h4>
@@ -1599,7 +1605,8 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <h4
-              class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+              class="d-inline-block text-uppercase border-bottom border-5 mb-4"
+              style="color: white"
             >
               Popular Links
             </h4>
@@ -1623,12 +1630,11 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <h4
-              class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+              class="d-inline-block text-uppercase border-bottom border-5 mb-4"
+              style="color: white"
             >
               Follow Us
             </h4>
-
-            <!-- <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6> -->
             <div class="d-flex">
               <a
                 class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
