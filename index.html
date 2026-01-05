@@ -56,6 +56,7 @@
           rgba(0, 0, 0, 0.35) 50%,
           rgba(0, 0, 0, 0.55) 100%
         );
+        background-position: center center !important;
         z-index: 0;
       }
 
@@ -209,7 +210,6 @@
   </style>
 
   <!-- places style -->
-
   <style>
     .chamber-card {
       background: #efeef7;
@@ -353,6 +353,174 @@
       justify-content: center;
     }
   </style>
+
+  <style>
+    .hero-carousel .carousel-item,
+    .hero-slide {
+      min-height: 740px;
+    }
+
+    .hero-slide {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        rgba(0, 0, 0, 0.55) 100%
+      );
+      z-index: 0;
+    }
+
+    .hero-slide .container,
+    .hero-slide .container * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content > * {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .carousel-item.active .hero-content > * {
+      animation: heroUp 0.75s ease forwards;
+    }
+
+    .carousel-item.active .hero-content h1 {
+      animation-delay: 0.1s;
+    }
+    .carousel-item.active .hero-content h5 {
+      animation-delay: 0.22s;
+    }
+    .carousel-item.active .hero-content .pt-2 {
+      animation-delay: 0.34s;
+    }
+
+    @keyframes heroUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-box {
+      padding: 90px 0;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-carousel .carousel-item,
+      .hero-slide {
+        min-height: 520px;
+      }
+
+      .hero-slide {
+        background-position: 101% center !important;
+      }
+
+      .hero-box {
+        justify-content: flex-start !important;
+        padding-top: 120px !important;
+        padding-bottom: 40px !important;
+        min-height: auto !important;
+      }
+
+      .hero-carousel h1 {
+        font-size: 2.05rem;
+        line-height: 1.12;
+      }
+
+      .hero-carousel h5 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <style>
+    .whatsapp-card {
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .wa-info {
+      text-align: left;
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .wa-line {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .wa-line + .wa-line {
+      border-top: 1px dashed rgba(0, 0, 0, 0.12);
+    }
+
+    .wa-line i {
+      font-size: 28px;
+      color: #198754;
+      width: 34px;
+      text-align: center;
+    }
+
+    .wa-line .fa-phone-alt {
+      color: #0d6efd;
+    }
+
+    .wa-label {
+      font-weight: 700;
+      color: #6c757d;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .wa-number {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 18px;
+      color: #212529;
+      text-decoration: none;
+    }
+
+    .wa-number:hover {
+      color: #574b97;
+    }
+
+    .wa-btn {
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .wa-btn:hover {
+      filter: brightness(0.95);
+      transform: translateY(-2px);
+      transition: all 0.25s ease;
+    }
+  </style>
+
   <body>
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
@@ -428,25 +596,130 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-      <div class="container py-5">
-        <div class="justify-content-start">
-          <div class="col-lg-8 text-center text-lg-start hero-box">
-            <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
-            <h5 class="text-white mb-md-4">
-              Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 20+ Years of
-              Experience
-            </h5>
-            <div class="pt-2">
-              <a
-                href="appointment.html"
-                class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
-                >Appointment</a
-              >
+    <div
+      id="heroCarousel"
+      class="carousel slide carousel-fade hero-carousel mb-5"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+      data-bs-touch="true"
+      data-bs-pause="false"
+    >
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div
+            class="container-fluid hero-header hero-slide"
+            style="background-image: url('img/background4.png')"
+          >
+            <div class="container py-5">
+              <div class="row justify-content-start">
+                <div
+                  class="col-lg-8 text-center text-lg-start hero-box hero-content"
+                >
+                  <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
+                  <h5 class="text-white mb-md-4">
+                    Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 20+ Years of
+                    Experience
+                  </h5>
+                  <div class="pt-2">
+                    <a
+                      href="appointment.html"
+                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
+                    >
+                      Appointment
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div
+            class="container-fluid hero-header-2 hero-slide"
+            style="background-image: url('img/ranasecondbackground.jpg')"
+          >
+            <div class="container py-5">
+              <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                  <h5
+                    class="d-inline-block text-primary text-uppercase border-bottom border-5"
+                    style="color: white !important"
+                  >
+                    Welcome To Dr. KS Rana
+                  </h5>
+                  <h1 class="display-1 text-white mb-md-4">
+                    Trusted Pediatric Care for Your Child’s Healthy Future
+                  </h1>
+                  <h5 class="text-white mb-md-4">
+                    Expert consultation by Dr. KS Rana, one of the most trusted
+                    paediatricians in
+                    <span
+                      class="text-primary"
+                      style="border-color: rgba(256, 256, 256, 0.3)"
+                      >Cooch Behar</span
+                    >.
+                  </h5>
+                  <div class="pt-2">
+                    <a
+                      href="appointment.html"
+                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
+                      >Appointment</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div
+            class="container-fluid hero-header hero-slide"
+            style="background-image: url('img/thirdBackground.jpg')"
+          >
+            <div class="container py-5">
+              <div class="row justify-content-start">
+                <div
+                  class="col-lg-8 text-center text-lg-start hero-box hero-content"
+                >
+                  <div class="pt-2">
+                    <a
+                      href="appointment.html"
+                      class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
+                    >
+                      Get Schedule
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <!-- Hero End -->
 
@@ -959,7 +1232,7 @@
                 Appointment
               </h5>
               <h1 class="display-4 text-white">
-                Make An Appointment For Your Family
+                Make An Appointment For Your Child
               </h1>
             </div>
 
@@ -985,71 +1258,54 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="bg-white text-center rounded p-5">
-              <h1 class="mb-4">Book An Appointment</h1>
+            <div class="bg-white text-center rounded p-5 whatsapp-card">
+              <h1 class="mb-3">Book on WhatsApp</h1>
+              <p class="mb-4 text-muted">
+                Click below to book an appointment instantly. We will confirm
+                your time slot on WhatsApp.
+              </p>
 
-              <form action="#" method="post">
-                <div class="row g-3">
-                  <div class="col-12 col-sm-6">
-                    <select
-                      class="form-select bg-light border-0"
-                      style="height: 55px"
-                      required
+              <div class="wa-info mb-4">
+                <div class="wa-line">
+                  <i class="fab fa-whatsapp"></i>
+                  <div>
+                    <div class="wa-label">WhatsApp Number</div>
+                    <a
+                      class="wa-number"
+                      href="https://wa.me/917908266376"
+                      target="_blank"
+                      rel="noopener"
                     >
-                      <option value="" selected disabled>Choose Service</option>
-                      <option>Newborn Care</option>
-                      <option>Fever &amp; Infection</option>
-                      <option>Vaccination</option>
-                      <option>Nutrition &amp; Growth</option>
-                      <option>Child Development</option>
-                      <option>Respiratory Issues</option>
-                    </select>
-                  </div>
-
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0"
-                      placeholder="Parent/Guardian Name"
-                      style="height: 55px"
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="tel"
-                      class="form-control bg-light border-0"
-                      placeholder="Phone Number"
-                      style="height: 55px"
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="date"
-                      class="form-control bg-light border-0"
-                      style="height: 55px"
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12">
-                    <textarea
-                      class="form-control bg-light border-0"
-                      rows="3"
-                      placeholder="Write symptoms / concern (optional)"
-                    ></textarea>
-                  </div>
-
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
-                      Make An Appointment
-                    </button>
+                      +91 79082 66376
+                    </a>
                   </div>
                 </div>
-              </form>
+
+                <div class="wa-line">
+                  <i class="fa fa-phone-alt"></i>
+                  <div>
+                    <div class="wa-label">Call (Appointment)</div>
+                    <a class="wa-number" href="tel:+919547196589"
+                      >+91 95471 96589</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <a
+                class="btn btn-success w-100 py-3 rounded-pill wa-btn"
+                href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-whatsapp me-2"></i> Book Appointment on
+                WhatsApp
+              </a>
+
+              <small class="d-block mt-3 text-muted">
+                Tip: Please share child’s age and symptoms for faster
+                confirmation.
+              </small>
             </div>
           </div>
         </div>
