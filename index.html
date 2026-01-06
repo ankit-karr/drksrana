@@ -297,7 +297,7 @@
       border-radius: 999px;
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .chamber-card {
         padding: 20px;
       }
@@ -318,11 +318,14 @@
       flex-direction: column;
       justify-content: center;
     }
+    .cst-pad {
+      padding: 18px 36px;
+    }
   </style>
   <!-- hero start -->
 
   <style>
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .hero-header {
         position: relative;
       }
@@ -380,7 +383,7 @@
       }
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .hero-header .hero-box {
         margin-top: 55px !important;
       }
@@ -399,11 +402,13 @@
     .hero-slide {
       position: relative;
       width: 100%;
+      /*height: 85vh;*/
     }
 
-    .hero-bg {
+    img.hero-bg {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
@@ -475,20 +480,144 @@
     }
 
     .hero-bn-right-top {
-      position: absolute;
-      top: 140px;
-      right: 58px;
+      padding-left: 600px;
+      padding-top: 168px;
       margin: 0;
       z-index: 3;
-      text-align: center;
       max-width: 100%;
-      line-height: 1.05;
       font-size: 4.2rem;
       font-weight: 900;
       text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
     }
 
-    @media (max-width: 575.98px) {
+    .hero-bn-right-top h1 {
+      margin-top: 100px;
+      line-height: 88px;
+      font-size: 56px;
+      color: #ffffff;
+    }
+    .hero-bn-right-top h5 {
+      font-size: 60px;
+    }
+
+    @media (max-width: 1366px) {
+      .hero-bn-right-top {
+        padding-left: 480px;
+        padding-top: 168px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 50px;
+        line-height: 70px;
+        font-size: 40px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-bn-right-top {
+        padding-left: 380px;
+        padding-top: 115px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 30px;
+        line-height: 60px;
+        font-size: 36px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .hero-bn-right-top {
+        padding-left: 330px;
+        padding-top: 115px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 30px;
+        line-height: 50px;
+        font-size: 30px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 26px;
+      }
+
+      .hero-pos-1 {
+        margin-top: 60px;
+        padding-left: 50px;
+      }
+      .hero-content h1 {
+        font-size: 36px;
+      }
+      .hero-content h5 {
+        font-size: 18px;
+      }
+      .cst-pad {
+        padding: 12px 26px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-bn-right-top {
+        padding-left: 330px;
+        padding-top: 115px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 30px;
+        line-height: 50px;
+        font-size: 30px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-bn-right-top {
+        padding-left: 230px;
+        padding-top: 78px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 20px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 18px;
+      }
+
+      .hero-slide {
+        width: 100%;
+        height: auto;
+      }
+      .hero-pos-1 {
+        margin-top: 40px;
+        padding-left: 50px;
+      }
+      .hero-content h1 {
+        font-size: 30px;
+      }
+      .hero-content h5 {
+        font-size: 16px;
+      }
+      .cst-pad {
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
       .hero-headline-bn {
         font-size: 1.05rem;
         line-height: 1.25;
@@ -498,12 +627,19 @@
         font-size: 0.98rem;
         line-height: 1.35;
       }
-
       .hero-bn-right-top {
-        top: 12px;
-        right: 12px;
-        max-width: 92%;
-        font-size: 1.55rem;
+        padding-left: 205px;
+        padding-top: 70px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 20px;
+        line-height: 26px;
+        font-size: 18px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 16px;
       }
     }
 
@@ -517,14 +653,9 @@
         font-size: 1.02rem;
         line-height: 1.35;
       }
-      .hero-bn-right-top {
-        top: 16px;
-        right: 16px;
-        font-size: 2.2rem;
-      }
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .hero-box {
         justify-content: flex-start;
         padding-top: 120px;
@@ -532,18 +663,20 @@
         min-height: auto;
       }
 
-      .hero-carousel h1 {
-        font-size: 2.05rem;
-        line-height: 1.12;
-      }
-
-      .hero-carousel h5 {
-        font-size: 1rem;
-      }
-
       .hero-pos-1 {
         margin-top: 0;
-        padding-left: 16px;
+        padding-left: 60px;
+        padding-top: 0px;
+      }
+      .hero-content h1 {
+        font-size: 20px;
+      }
+      .hero-content h5 {
+        font-size: 14px;
+      }
+      .cst-pad {
+        padding: 8px 15px;
+        font-size: 10px;
       }
     }
   </style>
@@ -652,7 +785,7 @@
       color: #fff;
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .whatsapp-float {
         right: 18px;
         bottom: 14px;
@@ -697,7 +830,7 @@
       color: #fff;
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 576px) {
       .whatsapp-float {
         right: 18px;
         bottom: 14px;
@@ -709,10 +842,43 @@
         font-size: 28px;
       }
     }
+
+    @media (max-width: 376px) {
+      .hero-bn-right-top {
+        padding-left: 135px;
+        padding-top: 60px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 10px;
+        line-height: 26px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-bn-right-top {
+        padding-left: 135px;
+        padding-top: 60px;
+      }
+
+      .hero-bn-right-top h1 {
+        margin-top: 10px;
+        line-height: 26px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      .hero-bn-right-top h5 {
+        font-size: 16px;
+      }
+    }
   </style>
   <body>
     <a
-      href="https://wa.me/917908266376?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%B6%E0%A6%BF%E0%A6%B6%E0%A7%81%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%AE%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4%0A%0A%E0%A6%B6%E0%A6%BF%E0%A6%B6%E0%A7%81%E0%A6%B0%20%E0%A6%A8%E0%A6%BE%E0%A6%AE%3A%0A%E0%A6%AC%E0%A6%AF%E0%A6%BC%E0%A6%B8%3A%0A%0A%E0%A6%A7%E0%A6%A8%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BE%E0%A6%A6%21"
+      href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
@@ -720,9 +886,8 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-
     <a
-      href="https://wa.me/917908266376?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%B6%E0%A6%BF%E0%A6%B6%E0%A7%81%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%AE%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4%0A%0A%E0%A6%B6%E0%A6%BF%E0%A6%B6%E0%A7%81%E0%A6%B0%20%E0%A6%A8%E0%A6%BE%E0%A6%AE%3A%0A%E0%A6%AC%E0%A6%AF%E0%A6%BC%E0%A6%B8%3A%0A%0A%E0%A6%A7%E0%A6%A8%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BE%E0%A6%A6%21"
+      href="https://wa.me/917908266376?text=Hello%20Dr.%20KS%20Rana%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AChild%20Name%3A%20%0AAge%3A%20%0AProblem%2FSymptoms%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20"
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
@@ -730,7 +895,6 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
       <div class="container">
@@ -825,13 +989,13 @@
     >
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="container-fluid hero-header hero-slide">
+          <div class="hero-header hero-slide">
             <img src="img/ranasecondbackground.jpg" class="hero-bg" alt="" />
             <div class="hero-overlay">
               <div class="container py-5">
                 <div class="row justify-content-start">
                   <div
-                    class="col-lg-8 text-center text-lg-start hero-box hero-content hero-pos-1 hero-mobile-left"
+                    class="col-lg-8 col-md-6 col-sm-7 col-7 text-start hero-box hero-content hero-pos-1 hero-mobile-left"
                   >
                     <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
                     <h5 class="text-white mb-md-4">
@@ -841,7 +1005,7 @@
                     <div class="pt-2">
                       <a
                         href="appointment.html"
-                        class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2"
+                        class="btn btn-outline-light cst-pad rounded-pill mx-2"
                       >
                         Appointment
                       </a>
@@ -854,26 +1018,22 @@
         </div>
 
         <div class="carousel-item">
-          <div class="container-fluid hero-header-2 hero-slide">
+          <div class="hero-header-2 hero-slide">
             <img src="img/rana4.jpg" class="hero-bg" alt="" />
             <div class="hero-overlay">
-              <div class="container py-5">
-                <div class="row justify-content-start">
-                  <h1 class="display-1 text-primary hero-bn-right-top">
-                    প্রতি শিশুর জন্য স্নেহময় যত্ন
-                  </h1>
-
-                  <h1 class="display-1 text-white">
-                    নিরাপদ, নির্ভরযোগ্য এবং সময়োপযোগী চিকিৎসা।
-                  </h1>
-                </div>
+              <div class="hero-bn-right-top">
+                <h5 class="text-primary">প্রতিটি শিশুর জন্য স্নেহময় যত্ন</h5>
+                <h1 class="text-white">
+                  নিরাপদ, নির্ভরযোগ্য এবং<br />
+                  সময়োপযোগী চিকিৎসা।
+                </h1>
               </div>
             </div>
           </div>
         </div>
 
         <div class="carousel-item">
-          <div class="container-fluid hero-header hero-slide">
+          <div class="hero-header hero-slide">
             <img src="img/RANA3.jpg" class="hero-bg" alt="" />
           </div>
         </div>
