@@ -72,6 +72,10 @@
   </style>
 
   <style>
+    .feature-circle {
+      width: 165px;
+      height: 165px;
+    }
     .whatsapp-float {
       position: fixed;
       right: 18px;
@@ -114,11 +118,15 @@
       .whatsapp-float i {
         font-size: 28px;
       }
+      .feature-circle {
+        width: 165px;
+        height: 165px;
+      }
     }
   </style>
   <body>
     <a
-      href="https://wa.me/917908266376?text=নমস্কার%20স্যার,%20আমি%20আমার%2C%20শিশুর%20জন্য%20অ্যাপয়েন্টমেন্ট%20চাই%20|%0A%0Aশিশুর%20নাম%20:%0A%0Aবয়স%20:%3A%220%3A%20%0A%20ধন্যবাদ%20!"
+      href="https://wa.me/917908266376?text=নমস্কার%20স্যার,%20আমি%20আমার%2C%20শিশুর%20জন্য%20অ্যাপয়েন্টমেন্ট%20চাই%20|%0A%0Aশিশুর%20নাম%20:%0A%0Aবয়স%20:%0A%0Aধন্যবাদ%20!"
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
@@ -209,12 +217,17 @@
     </div>
     <!-- Navbar End -->
 
+    <!-- About Start -->
     <div class="container-fluid py-5">
       <div class="container">
         <div class="row gx-5">
-          <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px">
+          <!-- DESKTOP CAROUSEL (LEFT) - only show on lg+ -->
+          <div
+            class="col-lg-5 mb-5 mb-lg-0 d-none d-lg-block"
+            style="min-height: 500px"
+          >
             <div
-              id="aboutCarousel"
+              id="aboutCarouselDesktop"
               class="carousel slide h-100"
               data-bs-ride="carousel"
               data-bs-interval="3000"
@@ -258,7 +271,7 @@
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#aboutCarousel"
+                data-bs-target="#aboutCarouselDesktop"
                 data-bs-slide="prev"
               >
                 <span
@@ -271,7 +284,7 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#aboutCarousel"
+                data-bs-target="#aboutCarouselDesktop"
                 data-bs-slide="next"
               >
                 <span
@@ -284,7 +297,7 @@
               <div class="carousel-indicators">
                 <button
                   type="button"
-                  data-bs-target="#aboutCarousel"
+                  data-bs-target="#aboutCarouselDesktop"
                   data-bs-slide-to="0"
                   class="active"
                   aria-current="true"
@@ -292,19 +305,19 @@
                 ></button>
                 <button
                   type="button"
-                  data-bs-target="#aboutCarousel"
+                  data-bs-target="#aboutCarouselDesktop"
                   data-bs-slide-to="1"
                   aria-label="Slide 2"
                 ></button>
                 <button
                   type="button"
-                  data-bs-target="#aboutCarousel"
+                  data-bs-target="#aboutCarouselDesktop"
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
                 ></button>
                 <button
                   type="button"
-                  data-bs-target="#aboutCarousel"
+                  data-bs-target="#aboutCarouselDesktop"
                   data-bs-slide-to="3"
                   aria-label="Slide 4"
                 ></button>
@@ -312,8 +325,10 @@
             </div>
           </div>
 
+          <!-- TEXT (RIGHT) -->
           <div class="col-lg-7">
-            <div class="mb-4">
+            <!-- Heading -->
+            <div class="mb-4 about-heading">
               <h5
                 class="d-inline-block text-primary text-uppercase border-bottom border-5"
               >
@@ -323,27 +338,122 @@
                 Trusted Pediatric Care with 15+ Years of Experience
               </h1>
             </div>
+
+            <!-- MOBILE CAROUSEL - show only below heading on < lg -->
+            <div class="d-lg-none mb-4" style="min-height: 320px">
+              <div
+                id="aboutCarouselMobile"
+                class="carousel slide h-100"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+                data-bs-touch="true"
+              >
+                <div class="carousel-inner h-100 rounded">
+                  <div class="carousel-item active h-100">
+                    <img
+                      src="img/drksrana2.jpeg"
+                      class="d-block w-100 h-100"
+                      style="object-fit: cover"
+                      alt="Dr KS Rana 1"
+                    />
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img
+                      src="img/drksrana3.jpeg"
+                      class="d-block w-100 h-100"
+                      style="object-fit: cover"
+                      alt="Dr KS Rana 2"
+                    />
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img
+                      src="img/drksrana4.jpeg"
+                      class="d-block w-100 h-100"
+                      style="object-fit: cover"
+                      alt="Dr KS Rana 3"
+                    />
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img
+                      src="img/withchild.jpeg"
+                      class="d-block w-100 h-100"
+                      style="object-fit: cover"
+                      alt="Dr KS Rana 4"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#aboutCarouselMobile"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#aboutCarouselMobile"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#aboutCarouselMobile"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#aboutCarouselMobile"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#aboutCarouselMobile"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#aboutCarouselMobile"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Now the paragraph comes after carousel on mobile -->
             <p>
               <b>Dr. KS Rana</b> is a senior pediatrician with over
               <b>15 years of experience</b> in providing comprehensive child
               healthcare. Widely recognized as one of the
               <b>best pediatricians in Cooch Behar</b> and a trusted
               <b>paediatrician in North Bengal</b>, he is known for ethical
-              medical practice, accurate diagnosis, and compassionate care. Dr.
-              Rana holds prestigious qualifications including
-              <b>MD (Pediatrics), DNB (Pediatrics), and MRCPCH-II (UK)</b>,
-              reflecting both national and international standards of pediatric
-              excellence. His areas of expertise include newborn and infant
-              care, vaccination and immunization, childhood infections,
-              respiratory and digestive disorders, nutrition, growth monitoring,
-              and child development. With a calm, child-friendly consultation
-              style and a strong focus on parent education, Dr. Rana has earned
-              the trust of generations of families across <b>Cooch Behar</b> and
-              surrounding regions
+              medical practice, accurate diagnosis, and compassionate care...
             </p>
             <div class="row g-3 pt-3">
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div
+                  class="bg-light-2 text-center rounded-circle py-4 feature-circle"
+                >
                   <i
                     class="fa fa-3x fa-child mb-3"
                     style="color: white !important"
@@ -359,7 +469,9 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div
+                  class="bg-light-2 text-center rounded-circle py-4 feature-circle"
+                >
                   <i
                     class="fa fa-3x fa-heartbeat mb-3"
                     style="color: white !important"
@@ -375,7 +487,9 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div
+                  class="bg-light-2 text-center rounded-circle py-4 feature-circle"
+                >
                   <i
                     class="fa fa-3x fa-users mb-3"
                     style="color: white !important"
@@ -389,7 +503,9 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div
+                  class="bg-light-2 text-center rounded-circle py-4 feature-circle"
+                >
                   <i
                     class="fa fa-3x fa-plus-square mb-3"
                     style="color: white !important"
@@ -407,10 +523,13 @@
                 </div>
               </div>
             </div>
+            <!-- your feature circles row here -->
           </div>
         </div>
       </div>
     </div>
+    <!-- About End -->
+
     <!-- Search End -->
 
     <!-- Team Start -->
