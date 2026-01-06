@@ -95,6 +95,26 @@
   </style>
 
   <style>
+    .testimonial-item img.rounded-circle {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .feature-circle {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 !important;
+    }
+
     .bg-light-2 {
       transition: transform 0.3s ease, box-shadow 0.3s ease,
         background 0.3s ease;
@@ -348,6 +368,16 @@
         border-color: #574b97 !important;
         color: #ffffff !important;
       }
+
+      .testimonial-item img.rounded-circle {
+        width: 110px;
+        height: 110px;
+      }
+
+      .feature-circle {
+        width: 165px;
+        height: 165px;
+      }
     }
 
     @media (max-width: 575.98px) {
@@ -445,18 +475,18 @@
     }
 
     .hero-bn-right-top {
-  position: absolute;
-  top: 140px;
-  right: 58px;
-  margin: 0;
-  z-index: 3;
-  text-align: center;
-  max-width: 100%;
-  line-height: 1.05;
-  font-size: 4.2rem;
-  font-weight: 900;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-}
+      position: absolute;
+      top: 140px;
+      right: 58px;
+      margin: 0;
+      z-index: 3;
+      text-align: center;
+      max-width: 100%;
+      line-height: 1.05;
+      font-size: 4.2rem;
+      font-weight: 900;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    }
 
     @media (max-width: 575.98px) {
       .hero-headline-bn {
@@ -803,7 +833,7 @@
                   >
                     <h1 class="display-1 text-white mb-md-4">Dr. KS Rana</h1>
                     <h5 class="text-white mb-md-4">
-                      Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 20+ Years
+                      Senior Pediatrician | MD, DNB, MRCPCH-II (UK) | 15+ Years
                       of Experience
                     </h5>
                     <div class="pt-2">
@@ -982,12 +1012,12 @@
                 About Me
               </h5>
               <h1 class="display-4">
-                Trusted Pediatric Care with 20+ Years of Experience
+                Trusted Pediatric Care with 15+ Years of Experience
               </h1>
             </div>
             <p>
               <b>Dr. KS Rana</b> is a senior pediatrician with over
-              <b>20 years of experience</b> in providing comprehensive child
+              <b>15 years of experience</b> in providing comprehensive child
               healthcare. Widely recognized as one of the
               <b>best pediatricians in Cooch Behar</b> and a trusted
               <b>paediatrician in North Bengal</b>, he is known for ethical
@@ -1005,7 +1035,9 @@
             </p>
             <div class="row g-3 pt-3">
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div
+                  class="bg-light-2 text-center rounded-circle py-4 feature-circle"
+                >
                   <i
                     class="fa fa-3x fa-child mb-3"
                     style="color: white !important"
@@ -1021,7 +1053,7 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div class="bg-light-2 text-center rounded-circle py-4 feature-circle">
                   <i
                     class="fa fa-3x fa-heartbeat mb-3"
                     style="color: white !important"
@@ -1037,7 +1069,7 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div class="bg-light-2 text-center rounded-circle py-4 feature-circle">
                   <i
                     class="fa fa-3x fa-users mb-3"
                     style="color: white !important"
@@ -1051,7 +1083,7 @@
               </div>
 
               <div class="col-sm-3 col-6">
-                <div class="bg-light-2 text-center rounded-circle py-4">
+                <div class="bg-light-2 text-center rounded-circle py-4 feature-circle">
                   <i
                     class="fa fa-3x fa-plus-square mb-3"
                     style="color: white !important"
@@ -1493,11 +1525,10 @@
                   </div>
                 </div>
                 <p class="fs-4 fw-normal">
-                  Dr. KS Rana explained everything calmly and clearly. My baby’s
-                  vaccination and growth plan was guided step-by-step, and we
-                  felt completely confident after the visit.
+                  ডা. রানা খুবই ধৈর্যশীল ও যত্নবান। আমাদের সন্তানের চিকিৎসায়
+                  আমরা সম্পূর্ণ সন্তুষ্ট।
                 </p>
-                <hr class="w-25 mx-auto" />
+                <!-- <hr class="w-25 mx-auto" /> -->
                 <h3>Mrs. Ananya D.</h3>
                 <h6 class="fw-normal text-primary mb-3">
                   Parent of 6-month-old
@@ -1519,11 +1550,10 @@
                   </div>
                 </div>
                 <p class="fs-4 fw-normal">
-                  Our child had recurring cough and wheezing. Dr. Rana’s
-                  diagnosis was accurate, the treatment worked quickly, and he
-                  also taught us how to manage triggers at home.
+                  দীর্ঘ অভিজ্ঞতা ও মানবিক ব্যবহারে ডা. রানা আমাদের সম্পূর্ণ
+                  ভরসার জায়গা।
                 </p>
-                <hr class="w-25 mx-auto" />
+                <!-- <hr class="w-25 mx-auto" /> -->
                 <h3>Mr. Sourav K.</h3>
                 <h6 class="fw-normal text-primary mb-3">
                   Parent of 4-year-old
@@ -1545,11 +1575,10 @@
                   </div>
                 </div>
                 <p class="fs-4 fw-normal">
-                  During a high fever, Dr. Rana was very supportive and
-                  reassuring. He checked thoroughly, explained warning signs,
-                  and the follow-up care was excellent.
+                  Long experience ebong human touch er combination e Dr Rana
+                  amader first choice pediatrician hoye uthechen.
                 </p>
-                <hr class="w-25 mx-auto" />
+                <!-- <hr class="w-25 mx-auto" /> -->
                 <h3>Mr. Prashanta Kumar Das</h3>
                 <h6 class="fw-normal text-primary mb-3">
                   Parent of 2-year-old
